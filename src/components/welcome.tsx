@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 interface WelcomeProps {
     name?: string, //optional props
@@ -44,6 +45,7 @@ const Welcome = (props: WelcomeProps): JSX.Element => {
 
     return (
         <>
+            <NavLink to={'/users'}><h2>Users list</h2> </NavLink>
             <h1>Your message is {message}</h1>
             <h2>Your value is {value} with Type {typeof value}</h2>
 
